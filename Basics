@@ -3,6 +3,19 @@ Kubernetes:
  > It will controll and automates the deployments and updates.
  > It can scale up or down the containerized applications and it's resources
  > Direct management of servers, which guarantees the running applications are same as the desired applications.
+ 
+A Kubernetes cluster basically consists of a controll panel and compute machine:
+1. Controll panel
+   > API(Application Program Interface) Server
+   > Controller
+   > scheduler
+   > etcd
+2. Compute machine
+   > kubelet
+   > kubeproxy
+   > continer run time
+   > container registry
+   
  Docker is a container creation tool. Where as Kubernetes is also a
  container creation tool along with that it will allocate them on different virtual machines which is not
  possible with docker. Kubernetes controlls the cluster in the form of Master and Worker nodes. There will
