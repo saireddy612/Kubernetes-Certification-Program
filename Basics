@@ -1,0 +1,9 @@
+Kubernetes:
+ > kubernetes Orchestrates the containers on multiple host servers. 
+ > It will controll and automates the deployments and updates.
+ > It can scale up or down the containerized applications and it's resources
+ > Direct management of servers, which guarantees the running applications are same as the desired applications.
+ Docker is a container creation tool. Where as Kubernetes is also a
+ container creation tool along with that it will allocate them on different virtual machines which is not
+ possible with docker. Kubernetes controlls the cluster in the form of Master and Worker nodes. There will
+ be only one unique master node.
