@@ -2,19 +2,20 @@ Kubernetes:
  > Kubernetes Orchestrates the containers on multiple host servers. 
  > It will control and automates the deployments and updates.
  > It can scale up or down the containerized applications and it's resources
- > Direct management of servers, which guarantees the running applications are the same as the desired applications.
+ > Direct management of servers, which guarantees the running applications are the same as the desired 
+   applications.
  
 A Kubernetes cluster basically consists of a control panel and computing machine:
 1. Control panel
    > API(Application Program Interface) Server
    > Controller: It is responsible for the control process. Where the desired number of replicas is
-                 the same as that of the created count and the desired nodes are equal to the currently working 
-                 nodes.
+                 the same as that of the created count and the desired nodes are equal to the 
+                 currently working nodes.
    > Scheduler: It is an intelligent block. When API Server receives a request for pod creation, the 
                 schedular will quickly fetch the node information and schedules the pod creation
                 according to the node's availability. 
-   > etcd: It is a key-value storage of the cluster data. It helps the scheduler and controller with the availability
-           resources and about cluster state changes.
+   > etcd: It is a key-value storage of the cluster data. It helps the scheduler and controller with the 
+           availability of resources and cluster state changes.
 2. Compute machine
    > kubelet: It is a node agent which communicates with the master node and executes the tasks taken from
               the API Server, if there is any issue while creating a pod it will restart the creation of
