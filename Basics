@@ -1,22 +1,32 @@
 Kubernetes:
- > kubernetes Orchestrates the containers on multiple host servers. 
- > It will controll and automates the deployments and updates.
+ > Kubernetes Orchestrates the containers on multiple host servers. 
+ > It will control and automates the deployments and updates.
  > It can scale up or down the containerized applications and it's resources
- > Direct management of servers, which guarantees the running applications are same as the desired applications.
+ > Direct management of servers, which guarantees the running applications are the same as the desired applications.
  
-A Kubernetes cluster basically consists of a controll panel and compute machine:
-1. Controll panel
+A Kubernetes cluster basically consists of a control panel and computing machine:
+1. Control panel
    > API(Application Program Interface) Server
-   > Controller
-   > scheduler
-   > etcd
+   > Controller: It is responsible for the control process. Where the desired number of replicas is
+                 the same as that of the created count and the desired nodes are equal to the currently working 
+                 nodes.
+   > Scheduler: It is an intelligent block. When API Server receives a request for pod creation, the 
+                schedular will quickly fetch the node information and schedules the pod creation
+                according to the node's availability. 
+   > etcd: It is a key-value storage of the cluster data. It helps the scheduler and controller with the availability
+           resources and about cluster state changes.
 2. Compute machine
-   > kubelet
-   > kubeproxy
-   > continer run time
+   > kubelet: It is a node agent which communicates with the master node and executes the tasks taken from
+              the API Server, if there is any issue while creating a pod it will restart the creation of
+              the pod and if there is an issue with the worker node, then API Server will detect the issue
+              and will shift container creation to another worker node.
+   > Kubeproxy: It is the core networking component inside the Kubernetes cluster it maintains the entire
+                network configuration. Manages the network routing for TCP and UDP packets and allows the
+                users to connect servers through the network.
+   > Container run time
    > container registry
    
- Docker is a container creation tool. Where as Kubernetes is also a
+ Docker is a container creation tool. Whereas Kubernetes is also a
  container creation tool along with that it will allocate them on different virtual machines which is not
- possible with docker. Kubernetes controlls the cluster in the form of Master and Worker nodes. There will
+ possible with docker. Kubernetes controls the cluster in the form of Master and Worker nodes. There will
  be only one unique master node.
