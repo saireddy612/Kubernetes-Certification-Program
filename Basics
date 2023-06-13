@@ -10,7 +10,7 @@ A Kubernetes cluster basically consists of a control panel and computing machine
    > API(Application Program Interface) Server: It is the primary access point for  cluster-level administrative operations.
    > Controller: It is responsible for the control process. Where the desired number of replicas is
                  the same as that of the created count and the desired nodes are equal to the 
-                 currently working nodes.
+                 currently working nodes. Lifecycle functions and desired state, Watch and update API Server
    > Scheduler: It is an intelligent block. When API Server receives a request for pod creation, the 
                 schedular will quickly fetch the node information and schedules the pod creation
                 according to the node's availability. 
@@ -18,16 +18,24 @@ A Kubernetes cluster basically consists of a control panel and computing machine
            availability of resources and cluster state changes.
    > kubectl: It will interact with the API Server in order to retrieve the information.
 2. Compute machine
-   > kubelet: It is a node agent which communicates with the master node and executes the tasks taken from
+   > kubelet: The kubelet has the responsibility for starting up pods on the node. It is a node agent 
+              which communicates with the master node and executes the tasks taken from
               the API Server, if there is any issue while creating a pod it will restart the creation of
               the pod and if there is an issue with the worker node, then API Server will detect the issue
               and will shift container creation to another worker node.
    > Kubeproxy: It is the core networking component inside the Kubernetes cluster it maintains the entire
                 network configuration. Manages the network routing for TCP and UDP packets and allows the
-                users to connect servers through the network.
-   > Container run time: runtime is needed to run the application containers running on pods inside a pod
-                         Ex:-  Docker.
-   > container run d: will allocate the container run time tools
+                users to connect servers through the network.[Responsible for pod networking and implementing
+                our services abstraction on the node itself, it does the load balancing of pods traffic]
+   > Container run time: It will pull the image from the container registry and provide an execution environment
+                and the pod abstraction runtime is needed to run the application containers running on pods
+                inside a pod     Ex:-  Docker.
+   > Container run d: will allocate the container run time tools
+
+Cluster Add-on Pods:
+   > DNS: it will store the pods, and service addresses with the DNS Server when they're created.
+   > Ingris: It is an essential advanced HTTP or layer 7 load
+   > Dashboard: It is a web-based administration Kubernetes cluster. 
    
  Docker is a container creation tool. Whereas Kubernetes is also a
  container creation tool along with that it will allocate them on different virtual machines which is not
