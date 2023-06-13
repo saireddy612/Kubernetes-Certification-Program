@@ -24,10 +24,80 @@ A Kubernetes cluster basically consists of a control panel and computing machine
    > Kubeproxy: It is the core networking component inside the Kubernetes cluster it maintains the entire
                 network configuration. Manages the network routing for TCP and UDP packets and allows the
                 users to connect servers through the network.
-   > Container run time
+   > Container run time: runtime is needed to run the application containers running on pods inside a pod
+                         Ex:-  Docker.
    > container registry
    
  Docker is a container creation tool. Whereas Kubernetes is also a
  container creation tool along with that it will allocate them on different virtual machines which is not
  possible with docker. Kubernetes controls the cluster in the form of Master and Worker nodes. There will
  be only one unique master node.
+
+kubectl Commands:
+kubectl get pods
+kubectl get nodes
+kubectl get services
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
