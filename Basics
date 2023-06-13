@@ -7,7 +7,7 @@ Kubernetes:
  
 A Kubernetes cluster basically consists of a control panel and computing machine:
 1. Control panel
-   > API(Application Program Interface) Server
+   > API(Application Program Interface) Server: It is the primary access point for  cluster-level administrative operations.
    > Controller: It is responsible for the control process. Where the desired number of replicas is
                  the same as that of the created count and the desired nodes are equal to the 
                  currently working nodes.
@@ -16,6 +16,7 @@ A Kubernetes cluster basically consists of a control panel and computing machine
                 according to the node's availability. 
    > etcd: It is a key-value storage of the cluster data. It helps the scheduler and controller with the 
            availability of resources and cluster state changes.
+   > kubectl: It will interact with the API Server in order to retrieve the information.
 2. Compute machine
    > kubelet: It is a node agent which communicates with the master node and executes the tasks taken from
               the API Server, if there is any issue while creating a pod it will restart the creation of
@@ -26,7 +27,7 @@ A Kubernetes cluster basically consists of a control panel and computing machine
                 users to connect servers through the network.
    > Container run time: runtime is needed to run the application containers running on pods inside a pod
                          Ex:-  Docker.
-   > container registry
+   > container run d: will allocate the container run time tools
    
  Docker is a container creation tool. Whereas Kubernetes is also a
  container creation tool along with that it will allocate them on different virtual machines which is not
