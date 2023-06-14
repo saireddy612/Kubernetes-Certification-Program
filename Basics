@@ -8,7 +8,8 @@ Kubernetes:
 A Kubernetes cluster basically consists of a control panel and computing machine:
 1. Control panel
    > API(Application Program Interface) Server: It is the primary access point for  cluster-level administrative operations.
-   > Controller: It is responsible for the control process. Where the desired number of replicas is
+   > Controller: Deployment, Replica set, NodeController.
+                 It is responsible for the control process. Where the desired number of replicas is
                  the same as that of the created count and the desired nodes are equal to the 
                  currently working nodes. Lifecycle functions and desired state, Watch and update API Server
    > Scheduler: It is an intelligent block. When API Server receives a request for pod creation, the 
@@ -42,10 +43,34 @@ Cluster Add-on Pods:
  possible with docker. Kubernetes controls the cluster in the form of Master and Worker nodes. There will
  be only one unique master node.
 
+1. creating pods
+2. performing deployment configuration(In order to have multiple replica sets)
+3. Services (Services add a layer of abstraction over the pods)
+
 kubectl Commands:
+create
+Get
+Run 
+Expose
+Delete
+Apply
+Edit
+kubectl cluster-info
 kubectl get pods
 kubectl get nodes
 kubectl get services
+kubectl apply -f podname
+kubectl get rs ---> To get replica set details
+kubectl get resourceType
+kubectl run name --image=imagename
+kubectl describe pod podname
+kubectl exec -it podname:containername bin/bash (it-Interactive Terminal)
+exit
+kubectl logs podname
+kubectl api-resources- gives the list of api-versions
+
+1. stateful application - where application state is exist( it consist of ID to retrieve the information back even if the application is get deleted)
+2. stateless application
 
 
 
