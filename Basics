@@ -117,9 +117,19 @@ spec:
 2. Nodeport: This service communicates between the user and the frontend app or service
 kubectl expose deployment nginx-deployment(deploymentfilename) --type=LoadBalancer --name=my-service(some service name)
 
-Controllers
+Controllers:
+1. Replicaset
+2. Replicacontroller
+3. Deployment: Deployment is the evolution of replicaset.
+4. Daemonset: If we want to have the pods on the multiple nodes, daemonset will help on it.
+5. TTL Controller (alpha)
+6. jobs
+
+
 Load Balancers
-self-Healing Applications
+self-Healing Applications:
+1. Liveness probe(1.exec, 2. http get, 3. tcp socket are used to check the application health in the pod)
+2. Readiness probe
 pod-scheduling
 Resource QoS
 Running Multiple Schedulers
