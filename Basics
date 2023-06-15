@@ -72,6 +72,59 @@ kubectl api-resources- gives the list of api-versions
 1. stateful application - where application state is exist( it consist of ID to retrieve the information back even if the application is get deleted)
 2. stateless application
 
+initcontainerdemo:
+> This is the container that executes before the main container. Unless the initcontainer gets passed successfully, the main container is not going to create.
+> container consists of scripts in the form of HTML files.
+
+Namespace: It is a logical entity. It can restrict the user from using the pods.
+kubectl get ns
+kubectl get pods -namespace=somename
+kubectl create namespace somename
+
+labels: Where we will different kinds of objects to specify the pods 
+
+selectors:
+equality based selectors: ==, !=
+set-based selectors: in, notin, exists
+
+
+Networking:
+Container Network Model: used for the Docker
+Container Network interface: used for Kubernetes: here we can use multiple container run time tools( Docker, Calico...etc.,)
+These are different in terms of the Architecture
+Calico is a CNI plugin for Kubernetes that enables network policies and networking on Kubernetes clusters.
+
+Services: Services allow the user to abstract the cluster and pod details. Since there is a chance of change in the
+pod IP spontaneously with restarting, therefore user can't abstract the pod details. Hence, the services will have a constant
+relationship with the pod in such a way that, though the pod IP changes it will allow the user to abstract the pod content.
+
+Types of Services:
+
+1. Cluster IP(Internal): It allows the pods to communicate internally.
+Format:
+apiVersion: v1
+kind: Service
+metadata: 
+  name: mysvc ## Name of the service
+spec:
+  type: ClusterIP
+  selector:
+    app: nginx
+  ports:
+    - targetPort: 80 ##Service object port details
+      port: 80 ##containers port details.
+
+2. Nodeport: This service communicates between the user and the frontend app or service
+
+
+Controllers
+Load Balancers
+self-Healing Applications
+pod-scheduling
+Resource QoS
+Running Multiple Schedulers
+
+
 
 
 
