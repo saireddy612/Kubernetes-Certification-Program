@@ -115,7 +115,7 @@ spec:
       port: 80 ##containers port details.
 
 2. Nodeport: This service communicates between the user and the frontend app or service
-
+kubectl expose deployment nginx-deployment(deploymentfilename) --type=LoadBalancer --name=my-service(some service name)
 
 Controllers
 Load Balancers
