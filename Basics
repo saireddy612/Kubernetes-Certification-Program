@@ -128,9 +128,19 @@ Controllers:
 
 Load Balancers
 self-Healing Applications:
+
+Health check:
 1. Liveness probe(1.exec, 2. http get, 3. tcp socket are used to check the application health in the pod)
 2. Readiness probe
-pod-scheduling
+3. Restart policy: provides to reinstate if the container is unhealthy.
+pod-scheduling:
+pod priority
+
+
+
+
+
+
 Resource QoS
 Running Multiple Schedulers
 
