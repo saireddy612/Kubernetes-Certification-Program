@@ -1,0 +1,18 @@
+kubectl :::
+   It will interface the user and kubernetes.
+kubectl [command] [type] [name] [config name]
+The kubernetes objects can be created using kubectl adhoc commands(not reusable)/ using Manifest file(reusable) ex: *.yaml file.
+
+
+Pods :::
+   (Application programming interface)
+   api version: v1 -->pods
+   api version: Group_Name/version_number
+   kind:
+
+Controller Objects :::
+   Replicasets
+   Replication controllers
+   Daemonsets
+   Deployments
+Volumes :::
