@@ -25,10 +25,18 @@ Volumes ::: gives persistence to the pods.
       create a volume in a pod and create a volume in the pod-created respective worker node, and configure both in order to save the pod data wisely.
       This is on the host machine level. and smaller-scale industry
 For large-scale industry
-   persistent:: a piece of storage in the cluster.    provisioning--->Binding----> Using-----> Reclaiming.
+   1. Admin registers storage classes
+   2. developer creates a claim
+   3. After approving the claim developer will use the storage.
+   persistent:: a piece of storage in the cluster.    provisioning--->Binding----> Using-----> Reclaiming. (SSD-fast, HDD-slow, glusterFS-Distributed NFS, OBJECT - Storage types)
       provisioning types:
          Static(pv needs to be created before pvc)
          Dynamic(pv is created at the same time as pvc)
    persistent volume claim:: Request for storage from application owners to storage admins in order to allocate the volume for the application.
-   
+Services:::
+   Nodeport- 30000-32767********
+   service port- it should be the same as the pod port.
+   Targetport- pod port.
+   pod ---> Active Container 
+            Passive Container
 
