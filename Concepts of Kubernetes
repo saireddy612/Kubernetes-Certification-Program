@@ -16,3 +16,9 @@ Controller Objects :::
    Daemonsets
    Deployments
 Volumes :::
+   config-Map
+   secret
+   persistent
+   persistent claim
+   
+
