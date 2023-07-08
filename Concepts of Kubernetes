@@ -1,3 +1,5 @@
+yum update -y
+
 kubectl :::
    It will interface the user and kubernetes.
 kubectl [command] [type] [name] [config name]
@@ -15,10 +17,18 @@ Controller Objects :::
    Replication controllers
    Daemonsets
    Deployments
-Volumes :::
-   config-Map
-   secret
-   persistent
-   persistent claim
+Volumes ::: gives persistence to the pods.
+   emptyDir:: Default volume. Temporary space, if the pod gets deleted, the volume gets deleted.
+   config-Map:: act as input to the pod
+   secret:: act as input to the pod
+   Host path::
+      create a volume in a pod and create a volume in the pod-created respective worker node, and configure both in order to save the pod data wisely.
+      This is on the host machine level. and smaller-scale industry
+For large-scale industry
+   persistent:: a piece of storage in the cluster.    provisioning--->Binding----> Using-----> Reclaiming.
+      provisioning types:
+         Static(pv needs to be created before pvc)
+         Dynamic(pv is created at the same time as pvc)
+   persistent volume claim:: Request for storage from application owners to storage admins in order to allocate the volume for the application.
    
 
