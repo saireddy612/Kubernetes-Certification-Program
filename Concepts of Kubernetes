@@ -17,6 +17,9 @@ Controller Objects :::
    Replication controllers
    Daemonsets
    Deployments
+
+
+
 Volumes ::: gives persistence to the pods.
    emptyDir:: Default volume. Temporary space, if the pod gets deleted, the volume gets deleted.
    config-Map:: act as input to the pod
@@ -39,4 +42,6 @@ Services:::
    Targetport- pod port.
    pod ---> Active Container 
             Passive Container
+Load balancer:::
+   basically routes the users to the pods with the loadbalancer service and nodeport service. when the pods are exposed and replicated on different working nodes.
 
