@@ -13,12 +13,14 @@ Pods :::
    kind:
 
 Controller Objects :::
-   Replicasets
-   Replication controllers
+   Replicasets:: It will manage the pod lifecycle and It is a lower-level abstraction that provides basic scaling mechanisms.
+   Replication controllers:: key feature of kubernetes and manages the pod lifecycle.
    Daemonsets
-   Deployments
+   Deployments:: It provides higher-level of abstractions and additional features such as rolling update and rollbacks and versioning of applications.
 
-
+Diff between replication controller and replicas set :::
+## replicaset supports only the set-based selectors whereas the replication controller supports the equality-based selectors.
+## replication controller allows rolling-update command whereas the replicaset can not.
 
 Volumes ::: gives persistence to the pods.
    emptyDir:: Default volume. Temporary space, if the pod gets deleted, the volume gets deleted.
@@ -55,3 +57,29 @@ Actions: Get, Create, Update, Delete, Patch.
 Helm::: package manager in Kubernetes
 nodeSelector::: customized pod allocation on worker nodes based on the node label.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Display Commands :::
+kubectl get pods --show-labels  --->to show labels
+
+Deleting Commands :::
+kubectl delete pods -l key=value -----> deleting pods based upon the label and its value
+kubectl delete rs -l key=value
+kubectl delete rc -l key=value
+kubectl delete deployment -l key=value
