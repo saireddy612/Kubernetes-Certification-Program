@@ -43,5 +43,15 @@ Services:::
    pod ---> Active Container 
             Passive Container
 Load balancer:::
-   basically routes the users to the pods with the loadbalancer service and nodeport service. when the pods are exposed and replicated on different working nodes.
+   basically routes the users to the pods with the load balancer service and nodeport service. when the pods are exposed and replicated on different working nodes.
+Troubleshoot the issues!
+Kubernetes Security! Role Based Access Control 
+RBAC divided into the
+Role decides what can be done. Subject decides who can do it.
+Namespaced----> role, role binding ( Admin, Developer, Default ) 
+cluster wide----> cluster role, cluster role binding
+Actions: Get, Create, Update, Delete, Patch.
+
+Helm::: package manager in Kubernetes
+nodeSelector::: customized pod allocation on worker nodes based on the node label.
 
