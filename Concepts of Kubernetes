@@ -13,8 +13,8 @@ Pods :::
    kind:
 
 Controller Objects :::
-   Replicasets:: It will manage the pod lifecycle and It is a lower-level abstraction that provides basic scaling mechanisms.
-   Replication controllers:: key feature of kubernetes and manages the pod lifecycle.
+   Replicasets:: It will manage the pod lifecycle and It is a lower-level abstraction that provides basic scaling mechanisms. The manifest file has a selector: matchLabels: part
+   Replication controllers:: key feature of kubernetes and manages the pod lifecycle. The manifest file has a selector: only.
    Daemonsets
    Deployments:: It provides higher-level of abstractions and additional features such as rolling update and rollbacks and versioning of applications.
 
