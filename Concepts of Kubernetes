@@ -16,7 +16,7 @@ Controller Objects :::
    Replicasets:: It will manage the pod lifecycle and It is a lower-level abstraction that provides basic scaling mechanisms. The manifest file has a selector: matchLabels: part
    Replication controllers:: key feature of kubernetes and manages the pod lifecycle. The manifest file has a selector: only.
    Daemonsets
-   Deployments:: It provides higher-level of abstractions and additional features such as rolling update and rollbacks and versioning of applications.
+   Deployments:: It provides higher-level of abstractions and additional features such as rolling update and rollbacks and versioning of applications are available.
 
 Diff between replication controller and replicas set :::
 ## replicaset supports only the set-based selectors whereas the replication controller supports the equality-based selectors.
@@ -29,15 +29,17 @@ Volumes ::: gives persistence to the pods.
     It is a file which will talk about the configuration required to run a pod in a particular environment. environments- QA,UAT Production..etc.,
     secrets are used to maintain sensitive data. (Credentials/ userId/password/token/keys)
     configmaps are used to maintain the nonsensitive data.
-    1. create a volume in the pod at etc directory.
-    2. create a configmap volume on the cluster level.
-    3. Refer the configmap volume mount path in the pod.
-       Now any file that is going to add to the pod, will reflect in the config-Map volume and vice versa.
+    1. create a configmap volume in the cluster level and include the files into it.
+    2. create a volume in the pod with /etc/non-sensitive-data.
+    image of application + configmapfile-----> deploy into the particular environment which will gives the pod along with the configuration files.
+    secrets:: very similar to the config-map,except in the manifest file we should give secretName: not simply name:
 
-   secret:: act as input to the pod
+
    Host path::
       create a volume in a pod and create a volume in the pod-created respective worker node, and configure both in order to save the pod data wisely.
       This is on the host machine level. and smaller-scale industry
+
+
 For large-scale industry
    1. Admin registers storage classes
    2. developer creates a claim
