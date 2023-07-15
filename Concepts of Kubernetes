@@ -65,7 +65,25 @@ Namespaced----> role, role binding ( Admin, Developer, Default )
 cluster wide----> cluster role, cluster role binding
 Actions: Get, Create, Update, Delete, Patch.
 
-Helm::: package manager in Kubernetes
+Helm::: package manager for Kubernetes. which help to automatically create manifest files for any Kubernetes objects in the form of HELM Charts. 
+Loadbalancer::: It can only route traffic to only one service and it is an external service to the cluster. It is costlier.
+Ingress::: (the act of going in) It can route traffic to  multiple services at a time and cheap
+   Ingress controller--> software(nginx, contour, traefik, haproxy)
+   Ingress resource ---> Defining Rules in Yml file.
+   Ingress rules:
+      host base      path base     backend(servicename:port)
+
+User----->LoadBalancer(provides single public ip for all services)----> Ingress controller----->workernodes
+
+
+
+
+
+
+
+
+
+
 nodeSelector::: customized pod allocation on worker nodes based on the node label.
 
 
