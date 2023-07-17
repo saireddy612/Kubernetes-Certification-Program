@@ -75,6 +75,12 @@ Ingress::: (the act of going in) It can route traffic to  multiple services at a
 
 User----->LoadBalancer(provides single public ip for all services)----> Ingress controller----->workernodes
 
+Integration of jenkins with Kubernetes :::
+Total 5 instances
+create an instance for jenkins master, jenkins slave
+create an instance for kubernetes master, kubernetes worker node-1, kubernetes worker node-2
+
+
 
 
 
