@@ -112,6 +112,7 @@ nodeSelector::: customized pod allocation on worker nodes based on the node labe
 
 Display Commands :::
 kubectl get pods --show-labels  --->to show labels
+kubectl get pods --all-namespaces
 
 Deleting Commands :::
 kubectl delete pods -l key=value -----> deleting pods based upon the label and its value
