@@ -31,3 +31,58 @@ Jenkins slave configuration :::
           6. ls
           7. ll ---> we will see the ID's. now we have authorize those keys 
           8. cat id_rsa.pub > authorized_keys 
+          9. chown -R devopsadmin /home/devopsadmin/.ssh
+             chmod 600 /home/devopsadmin/.ssh/authorized_keys
+             chmod 700 /home/devopsadmin/.ssh
+   7. Get into the jenkins> Dashboard>manage Jenkins >node
+            directory :: /home/devopsadmin
+            launch method: via SSH
+            Host: slave service private IP address
+            credentials :: add : 1. click on jenkins
+                                 2. kind : click on ssh username with private key
+                                 3. ID can be anything
+                                 4. username : devopsadmin
+                                 5. Click on enter directly
+                                 6. go to slave machine terminal cd /home/devopsadmin/.ssh
+                                    ls
+                                    cat id_rsa ---> opens the private key, copy it
+                                 7. Host key verification strategy: select manually trusted key verification strategy.
+                                 8. save it and go to the nodes, open the created node --> trust ssh host key > press yes.
+Integration is done.
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
