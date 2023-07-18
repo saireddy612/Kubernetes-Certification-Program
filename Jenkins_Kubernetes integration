@@ -1,0 +1,8 @@
+We need 5 servers to operate the jenkins CI/CD Pipeline
+
+
+1. jenkins master (java, git, jenkins)
+2. Jenkins slave (java, git, maven, docker)
+3. Kubernetes Master
+4. Kubernetes workernode_1
+5. Kubernetes workernode_2
