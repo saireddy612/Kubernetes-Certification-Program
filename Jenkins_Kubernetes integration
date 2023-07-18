@@ -1,8 +1,33 @@
 We need 5 servers to operate the jenkins CI/CD Pipeline
 
 
-1. jenkins master (java, git, jenkins)
+1. Jenkins master (java, git, Jenkins)
 2. Jenkins slave (java, git, maven, docker)
 3. Kubernetes Master
 4. Kubernetes workernode_1
 5. Kubernetes workernode_2
+
+
+
+
+Jenkins slave configuration :::
+    1. sudo apt update -y
+    2. sudo apt install openjdk-11-jre -y
+    3. java -version
+    4. Go to the Jenkins install and run the respective ubuntu commands that are given in the website
+    5. sudo apt install git -y
+    6. sudo apt install maven -y
+    7. mvn --version
+    8. apt get install docker.io
+    6. Create a user and user access keys (devopsadmin)-----> in order to integrate the slave with master.
+       sshkeys==>
+          private & public authorized keys.
+
+          1. useradd devopsadmin -s /bin/bash -m -d /home/devopsadmin  ----> creating user devopsadmin and making a directory in the user
+          2. su -devopsadmin ---> login to the user space.
+          3. cd /home/devopsadmin/
+          4. ssh-keygen -t rsa -b 4096 -m PEM  ---> it will generate a file with .ssh extension
+          5. cd .ssh
+          6. ls
+          7. ll ---> we will see the ID's. now we have authorize those keys 
+          8. cat id_rsa.pub > authorized_keys 
