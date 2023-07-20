@@ -52,6 +52,12 @@ Jenkins slave configuration :::
 Integration is done.
 
 ** Now go back to the jenkins and create any build activity with selecting an option(Restrict where this project can be run) to be the name of the slave machine.
+Jenkins slave devopsadmin user can not access some of the tools that are in root level. for example be a devopsadmin user and type docker ps, you wont get anything.
+In order to provide the access, we should follow the below steps. 
+1. Be a root user
+2. sudo usermod -aG docker devopsadmin
+3. su - devopsadmin
+4.
 
             
 
