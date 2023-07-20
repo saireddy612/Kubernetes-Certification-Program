@@ -11,6 +11,7 @@ We need 5 servers to operate the jenkins CI/CD Pipeline
 
 
 Jenkins slave configuration :::
+       sudo -i --> become a root user.
     1. sudo apt update -y
     2. sudo apt install openjdk-11-jre -y
     3. java -version
@@ -49,6 +50,8 @@ Jenkins slave configuration :::
                                  7. Host key verification strategy: select manually trusted key verification strategy.
                                  8. save it and go to the nodes, open the created node --> trust ssh host key > press yes.
 Integration is done.
+
+** Now go back to the jenkins and create any build activity with selecting an option(Restrict where this project can be run) to be the name of the slave machine.
 
             
 
