@@ -57,7 +57,14 @@ In order to provide the access, we should follow the below steps.
 1. Be a root user
 2. sudo usermod -aG docker devopsadmin
 3. su - devopsadmin
-4.
+
+Let's run a CICD pipline :::
+
+SCM-Checkout -> perform Application build(Create artifacts) -> Docker Build(Create Docker Image) -> Publish to dockerhub -> Deploy to K8s
+SCM-Checkout:: It is basically cloning the remote repository content into the jenkins slave workspace.
+Application Build :: It will perform the build activity and creates the source into an artifacts. (It will be available in the 
+Docker Build :: creates an image using the artifacts and pushes into the Docker hub.
+dckr_pat_-xf2TPtRoXeru2D2jLYT7fEaOV8
 
             
 
