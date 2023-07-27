@@ -2,3 +2,4 @@ HTTP: Hypertext transfer protocol.
 cURL: client uniform resource locator.
 TCP: Transmission controll protocol.
 DNS: Domain name system
+SSH: Secure shell
